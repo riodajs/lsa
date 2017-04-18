@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Diccionario
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+
+
+      <ion-item (click)="goToVideos(p)" *ngFor= "let p of playlist">
+        <ion-thumbnail item-left>
+          <img [src]=  p.snippet.thumbnails.default.url >
+        </ion-thumbnail>
+        <h2> {{ p.snippet.title }} </h2>
+      </ion-item>
+
+    </ion-list>
+</ion-content>
